@@ -1,6 +1,6 @@
 /*
 [Script]
-http-response ^https://cdn.altstore.io/file/altstore/apps.json requires-body=1,max-size=0,debug=1,script-path=altstore.js
+http-response ^https://cdn.altstore.io/file/altstore/apps.json requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/joyoner/rule/master/JS/altstore.js
 [MITM]
 hostname = cdn.altstore.io
 */
