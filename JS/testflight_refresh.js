@@ -13,7 +13,7 @@ $httpClient.get(url, (error, response, data) => {
     //console.log(data)
 
     if (data.match('This beta is full') || data.match('测试员已满')) {
-      //$notification.post('Full','Full','Full')
+      $notification.post('Full','Full','Full')
     } else {
       $notification.post('Open', 'Join', `itms-beta://testflight.apple.com/join/${appid}`)
     }
