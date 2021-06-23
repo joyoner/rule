@@ -1,0 +1,43 @@
+{
+    "inbounds": [
+        {
+            "port": 12345,
+            "protocol": "shadowsocks",
+            "settings": {
+                "clients": [
+                    {
+                        "password": "password",
+                        "method": "aes-128-gcm"
+                    },
+                    {
+                        "password": "password",
+                        "method": "chacha20-poly1305"
+                    }
+                ],
+                "network": "tcp,udp"
+            }
+        },
+        {
+            "port": 23456,
+            "protocol": "shadowsocks",
+            "settings": {
+                "clients": [
+                    {
+                        "password": "password",
+                        "method": "aes-128-gcm"
+                    },
+                    {
+                        "password": "password",
+                        "method": "chacha20-poly1305"
+                    }
+                ],
+                "network": "tcp,udp"
+            }
+        }        
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        }
+    ]
+}
