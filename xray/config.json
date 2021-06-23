@@ -1,7 +1,7 @@
 {
     "inbounds": [
         {
-            "port": 12345,
+            "port": 44444,
             "protocol": "shadowsocks",
             "settings": {
                 "clients": [
@@ -10,7 +10,7 @@
                         "method": "aes-128-gcm"
                     },
                     {
-                        "password": "password",
+                        "password": "cloudiplc",
                         "method": "chacha20-poly1305"
                     }
                 ],
@@ -18,7 +18,7 @@
             }
         },
         {
-            "port": 23456,
+            "port": 3389,
             "protocol": "shadowsocks",
             "settings": {
                 "clients": [
@@ -27,7 +27,7 @@
                         "method": "aes-128-gcm"
                     },
                     {
-                        "password": "password",
+                        "password": "cloudiplc",
                         "method": "chacha20-poly1305"
                     }
                 ],
