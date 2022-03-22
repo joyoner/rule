@@ -1,4 +1,4 @@
-#!name=QX模式
+#!name=VIF Only
 #!desc=Enable tun only and force 80 port http proxy
 
 [General]
