@@ -9,7 +9,7 @@ wget --no-check-certificate -qO- 'https://github.com/AdguardTeam/AdGuardHome/rel
 tar -zxvf kaminari-x86_64-unknown-linux-gnu.tar.gz
 
 #参考信息，支撑下面的输入
-local-addr-sample=`curl ip.sb`
+local-addr-sample==$(curl -s https://api.ip.sb/ip -A Mozilla)
 echo -e $local-addr-sample
 
 # 设置变量
