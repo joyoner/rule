@@ -13,7 +13,7 @@ tar -zxvf kaminari-x86_64-unknown-linux-gnu.tar.gz && rm -f kaminari-x86_64-unkn
 #echo "本地地址：$local_addr_sample"
 
 # 设置变量
-echo "最新版本：$tag_name"
+echo "最新版本：$tag_name \n"
 read -p " 请输入转发模式【1:server | 2:client】: " forward_type 
 read -p " 请输入本地监听端口: " local_port
 read -p " 请输入转发目的地址: " remote_addr
