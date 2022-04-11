@@ -1,7 +1,8 @@
 #!/bin/sh
 # 获取最新版本号
 tag_name=$(curl -s https://api.github.com/repos/zephyrchien/kaminari/releases/latest | grep tag_name|cut -f4 -d "\"")
-# 最新版地址
+# 获取最新版地址
+cd /root/
 #wget --no-check-certificate -N https://github.com/zephyrchien/kaminari/releases/download/"$tag_name"/kaminari-x86_64-unknown-linux-gnu.tar.gz
 wget --no-check-certificate -N https://ghproxy.com/https://github.com/zephyrchien/kaminari/releases/download/"$tag_name"/kaminari-x86_64-unknown-linux-gnu.tar.gz
 
@@ -14,9 +15,10 @@ tar -zxvf kaminari-x86_64-unknown-linux-gnu.tar.gz && rm -f kaminari-x86_64-unkn
 start(){
     if [[ $forward_type == "1" ]];then
         read -p " 请输入域名: " server_name
-        ./kaminaris 0.0.0.0:$local_port $remote_addr:$remote_port 'tls;servername='$server_name''
+        nohup /root/kaminaris 0.0.0.0:$local_port $remote_addr:$remote_port 'tls;servername='$server_name'' >> /dev/null 2>&1 &
     elif [[ $forward_type == "2" ]];then
-        ./kaminaric  0.0.0.0:$local_port $remote_addr:$remote_port 'tls;sni=$sni;insecure;0rtt'
+        read -p " 请输入域名SNI: " sni_name
+        nohup /root/kaminaric  0.0.0.0:$local_port $remote_addr:$remote_port 'tls;sni='$sni_name';insecure;0rtt' >> /dev/null 2>&1 &
     else
         echo -e "参数输入有误！"
     fi
