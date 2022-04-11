@@ -32,3 +32,4 @@ start(){
 }
 
 start
+echo -e "已成功开启隧道转发：$local_port->$remote_addr:$remote_port"
