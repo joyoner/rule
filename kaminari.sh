@@ -12,6 +12,13 @@ tar -zxvf kaminari-x86_64-unknown-linux-gnu.tar.gz && rm -f kaminari-x86_64-unkn
 #local_addr_sample=$(curl -s https://api.ip.sb/ip -A Mozilla)
 #echo "本地地址：$local_addr_sample"
 
+# 设置变量
+echo "最新版本：$tag_name"
+read -p " 请输入转发模式【1:server | 2:client】: " forward_type 
+read -p " 请输入本地监听端口: " local_port
+read -p " 请输入转发目的地址: " remote_addr
+read -p " 请输入转发目的端口: " remote_port
+
 start(){
     if [[ $forward_type == "1" ]];then
         read -p " 请输入域名: " server_name
@@ -24,10 +31,4 @@ start(){
     fi
 }
 
-# 设置变量
-echo "最新版本：$tag_name"
-read -p " 请输入转发模式【1:server | 2:client】: " forward_type 
-read -p " 请输入本地监听端口: " local_port
-read -p " 请输入转发目的地址: " remote_addr
-read -p " 请输入转发目的端口: " remote_port
 start
