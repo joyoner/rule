@@ -3,11 +3,11 @@
 tag_name=$(curl -s https://api.github.com/repos/zephyrchien/kaminari/releases/latest | grep tag_name|cut -f4 -d "\"")
 # 获取最新版地址
 cd /root/
-#wget --no-check-certificate -N https://github.com/zephyrchien/kaminari/releases/download/"$tag_name"/kaminari-x86_64-unknown-linux-gnu.tar.gz
-wget --no-check-certificate -N https://ghproxy.com/https://github.com/zephyrchien/kaminari/releases/download/"$tag_name"/kaminari-x86_64-unknown-linux-gnu.tar.gz
+#wget --no-check-certificate -N https://github.com/zephyrchien/kaminari/releases/download/"$tag_name"/kaminari-x86_64-unknown-linux-musl.tar.gz
+wget --no-check-certificate -N https://ghproxy.com/https://github.com/zephyrchien/kaminari/releases/download/"$tag_name"/kaminari-x86_64-unknown-linux-musl.tar.gz
 
 # 解压到当前目录
-tar -zxvf kaminari-x86_64-unknown-linux-gnu.tar.gz && rm -f kaminari-x86_64-unknown-linux-gnu.tar.gz
+tar -zxvf kaminari-x86_64-unknown-linux-musl.tar.gz && rm -f kaminari-x86_64-unknown-linux-musl.tar.gz
 
 #local_addr_sample=$(curl -s https://api.ip.sb/ip -A Mozilla)
 #echo "本地地址：$local_addr_sample"
