@@ -26,8 +26,8 @@ start(){
 
 # 设置变量
 echo "最新版本：$tag_name"
-read -p " 请输入转发模式【1:server；2:client】: " forward_type 
+read -p " 请输入转发模式【1:server | 2:client】: " forward_type 
 read -p " 请输入本地监听端口: " local_port
-read -p " 请输入目的地址: " remote_addr
-read -p " 请输入目的端口: " remote_port
+read -p " 请输入转发目的地址: " remote_addr
+read -p " 请输入转发目的端口: " remote_port
 start
