@@ -1,8 +1,8 @@
-#!name=VSCO 解锁
-#!desc=VSCO vip 解锁滤镜 视频编辑等
+#!name=VSCO Unlock
+#!desc=VSCO Unlock
 
 [Script]
-Revenuecat = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path= https://github.com/langkhach270389/Surge-LK/raw/main/scripts/langkhach/revenuecat.js,script-update-interval=-1
+Revenuecat = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path=https://github.com/langkhach270389/Surge-LK/raw/main/scripts/langkhach/revenuecat.js,script-update-interval=-1
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com
