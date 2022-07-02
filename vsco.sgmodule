@@ -3,8 +3,7 @@
 
 
 [Script]
-VSCO = 
-type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,requires-body=1,max-size=0
+VSCO = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/subscribers|vsco\.co\/api\/subscriptions\/\d\.\d\/user-subscriptions)\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js,requires-body=1,max-size=0
 
 Revenuecat = type=http-response,pattern=https:\/\/api\.revenuecat\.com,requires-body=1,max-size=0,script-path= https://github.com/langkhach270389/Surge-LK/raw/main/scripts/langkhach/revenuecat.js,script-update-interval=-1
 
