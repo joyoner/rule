@@ -1,0 +1,18 @@
+#!name=腾讯视频 终极999版
+#!desc=去除开屏,视频广告
+#!食用说明，设置下开屏部分需要你自己建立txt文件根据对应正则改成mp4和jpg，在[Map Local]里选择文件，设置好后关掉模块登录账号，在使用即可，无视一切缓存
+
+[Rule]
+AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
+
+# > 开屏
+[Map Local]
+^http:\/\/pgdt\.gtimg\.cn data="0 1.jpg"
+^http:\/\/.+\.tc\.qq\.com\/.+mp4 data="1 5.mp4"
+
+[Script]
+腾讯 = type=http-request,pattern=^(https:\/\/i\.video|http:\/\/iacc)\.qq\.com\/$,requires-body=0,max-size=0,script-path=Tx.js
+
+
+[MITM]
+hostname = %APPEND% i.video.qq.com,iacc.qq.com
