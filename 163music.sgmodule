@@ -1,0 +1,21 @@
+#!name=网易云vip+去广告
+
+[Rule]
+URL-REGEX,^https?:\/\/(.+)\/eapi\/ad,REJECT
+DOMAIN,ossgw.alicdn.com,REJECT
+DOMAIN-KEYWORD,iadmusicma,REJECT
+DOMAIN-KEYWORD,netease,REJECT
+DOMAIN-KEYWORD,jiasu.com,REJECT
+
+[Host]
+interface3.music.163.com = 115.236.121.4
+
+
+
+[Script]
+网易云vip = type=http-request,pattern=.+eapi\/(song|v\d|playlist|search|artist|music),requires-body=0,script-path=网易云vip 3.js
+
+
+
+[MITM]
+hostname = %APPEND% 115.236.121.4
