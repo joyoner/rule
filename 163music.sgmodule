@@ -8,7 +8,7 @@ DOMAIN-KEYWORD,netease,REJECT
 DOMAIN-KEYWORD,jiasu.com,REJECT
 
 [Host]
-interface3.music.163.com = 115.236.121.4
+*music.163.com = 115.236.121.4
 
 
 
