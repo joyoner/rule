@@ -1,3 +1,6 @@
+#!name=喜马拉雅去广告
+#!desc=去除开屏、首页Banner广告
+
 [Rule]
 URL-REGEX,^http:\/\/adse\.ximalaya\.com\/(ting|adx)(?!preSale),REJECT 
 DOMAIN,gslbali.ximalaya.com,REJECT
