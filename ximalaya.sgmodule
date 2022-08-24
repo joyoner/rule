@@ -5,6 +5,7 @@
 
 
 [Rule]
+URL-REGEX,^https?:\/\/mobile\.ximalaya\.com\/discovery-feed\/focus,REJECT
 URL-REGEX,^http:\/\/adse\.ximalaya\.com\/(?!.*preSale),REJECT
 DOMAIN,gslbali.ximalaya.com,REJECT
 DOMAIN,gslbtx.ximalaya.com,REJECT
