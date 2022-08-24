@@ -1,14 +1,18 @@
-#!name=喜马拉雅去广告
-#!desc=去除开屏、首页Banner广告
+#!name=喜马拉雅
+#!desc=XiMaLaYa_喜马拉雅页面优化去广告Surge版本
+#!system=ios        
+# @ddgksf2013 https://github.com/ddgksf2013/Cuttlefish/raw/master/Rewrite/AdBlock/Ximalaya.conf
+
 
 [Rule]
-URL-REGEX,^http:\/\/adse\.ximalaya\.com\/(ting|adx)(?!preSale),REJECT 
+URL-REGEX,^http:\/\/adse\.ximalaya\.com\/(?!.*preSale),REJECT
 DOMAIN,gslbali.ximalaya.com,REJECT
 DOMAIN,gslbtx.ximalaya.com,REJECT
-DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
+
+
 
 [Script]
-喜马拉雅 = type=http-response,pattern=^https?:\/\/mobile\.ximalaya\.com\/(discovery-feed|category|mobile-user)\/v\d\/(mix|category|homePage),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/xmlyad.js,script-update-interval=0
+喜马拉雅 = type=http-response,pattern=^https?:\/\/mobile\.ximalaya\.com\/(discovery-feed|category|mobile-user)\/v\d\/(mix|category|homePage),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/xmly_json.js,script-update-interval=0
 
 [MITM]
 hostname = %APPEND% mobile.ximalaya.com
