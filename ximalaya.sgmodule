@@ -3,14 +3,11 @@
 #!system=ios        
 # @ddgksf2013 https://github.com/ddgksf2013/Cuttlefish/raw/master/Rewrite/AdBlock/Ximalaya.conf
 
-
 [Rule]
 URL-REGEX,^https?:\/\/mobile\.ximalaya\.com\/discovery-feed\/focus,REJECT
 URL-REGEX,^http:\/\/adse\.ximalaya\.com\/(?!.*preSale),REJECT
 DOMAIN,gslbali.ximalaya.com,REJECT
 DOMAIN,gslbtx.ximalaya.com,REJECT
-
-
 
 [Script]
 喜马拉雅 = type=http-response,pattern=^https?:\/\/mobile\.ximalaya\.com\/(discovery-feed|category|mobile-user)\/v\d\/(mix|category|homePage),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Script/xmly_json.js,script-update-interval=0
