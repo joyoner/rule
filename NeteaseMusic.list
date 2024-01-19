@@ -1,10 +1,10 @@
 # > NeteaseMusic
 # > https://github.com/UnblockNeteaseMusic/server/blob/enhanced/src/hook.js
 # > hook.target.host
-music.163.com
-interface.music.163.com
-interface3.music.163.com
-apm.music.163.com
-apm3.music.163.com
-interface.music.163.com.163jiasu.com
-interface3.music.163.com.163jiasu.com
+DOMAIN,music.163.com,extended-matching
+DOMAIN,interface.music.163.com,extended-matching
+DOMAIN,interface3.music.163.com,extended-matching
+DOMAIN,apm.music.163.com,extended-matching
+DOMAIN,apm3.music.163.com,extended-matching
+DOMAIN,interface.music.163.com.163jiasu.com,extended-matching
+DOMAIN,interface3.music.163.com.163jiasu.com,extended-matching
